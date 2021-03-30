@@ -1,9 +1,19 @@
 import request from 'supertest';
-import { app } from '../index';
+import app from '../app';
+
 
 describe("test THe root path", () => {
-    test("It should response the GET method", async () => {
+    test("It should response the GET method", async (done) => {
         const res = await request(app).get('/');
         expect(res.status).toBe(200);
+        done();
     })
+})
+
+beforeAll(done => {
+    done()
+})
+
+afterAll(done => {
+    done()
 })
