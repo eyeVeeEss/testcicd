@@ -5,7 +5,7 @@ import { AppRouter } from './AppRouter';
 import './controllers/LoginController';
 import './controllers/RootController';
 
-const app = express();
+export const app = express();
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(cookieSession({ keys: ['sss'] }));
 app.use(AppRouter.getInstance());
